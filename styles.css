@@ -142,7 +142,7 @@ nav {
 
 .empresa-card {
     position: relative;
-    height: 480px;
+    height: 500px;
     border-radius: 30px;
     overflow: hidden;
     color: var(--primary);
@@ -152,23 +152,48 @@ nav {
     justify-content: flex-end;
     padding: 40px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     background: #ffffff;
     align-items: center;
     text-align: center;
     z-index: 1;
 }
 
+/* Efecto Glow Fosforescente por Empresa */
+.card-vivebien:hover {
+    box-shadow: 0 20px 100px rgba(139, 0, 0, 0.45);
+    border-color: var(--color-vivebien);
+}
+
+.card-inten:hover {
+    box-shadow: 0 20px 100px rgba(0, 0, 255, 0.45);
+    border-color: var(--color-inten);
+}
+
+.card-proin:hover {
+    box-shadow: 0 20px 100px rgba(255, 0, 0, 0.45);
+    border-color: var(--color-proin);
+}
+
+.card-andax:hover {
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.25);
+    border-color: var(--color-andax);
+}
+
+.card-velare:hover {
+    box-shadow: 0 20px 100px rgba(212, 175, 55, 0.45);
+    border-color: var(--color-velare-alt);
+}
+
 .empresa-card:hover {
     transform: translateY(-15px) scale(1.02);
 }
 
-/* Sección Corporativa Sugerida */
+/* Sección Corporativa */
 .corporativo-section {
-    padding: 100px 10%;
+    padding: 120px 10%;
     background-color: var(--white);
     text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .corporativo-content {
@@ -177,11 +202,12 @@ nav {
 }
 
 .corporativo-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.8;
     color: var(--secondary);
     letter-spacing: 0.5px;
+    margin-bottom: 60px;
 }
 
 .corporativo-highlight {
@@ -189,107 +215,84 @@ nav {
     color: var(--primary);
 }
 
-.empresa-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: var(--transition);
+/* Identidad P-ONCE enlaces */
+.identidad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.empresa-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.empresa-card h3 {
-    position: relative;
-    z-index: 2;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.empresa-card p {
-    position: relative;
-    z-index: 2;
-    font-size: 0.95rem;
-    font-weight: 400;
-}
-
-/* Estilos Específicos por Empresa (Resplandor 4D) */
-.card-vivebien .logo-img {
-    box-shadow: 0 0 50px rgba(139, 0, 0, 0.4);
-}
-
-/* Rojo */
-.card-inten i.fas {
-    box-shadow: 0 0 50px rgba(0, 0, 255, 0.4);
-    color: var(--color-inten) !important;
-}
-
-/* Azul */
-.card-proin .logo-img {
-    box-shadow: 0 0 50px rgba(255, 0, 0, 0.4);
-}
-
-/* Rojo PROIN */
-.card-andax .logo-img {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
-}
-
-/* Negro */
-.card-velare .logo-img {
-    box-shadow: 0 0 50px rgba(128, 128, 128, 0.4);
-}
-
-/* Gris */
-
-@keyframes floating {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* Optimización de Logos 4D */
-.logo-img,
-.empresa-card i.fas {
-    width: 160px !important;
-    /* Más grande */
-    height: 160px !important;
-    object-fit: contain;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 2;
-    background-color: white;
-    border-radius: 50%;
+.identidad-link {
     padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: floating 4s ease-in-out infinite;
-    transition: var(--transition);
+}
+
+.identidad-link:hover {
+    background-color: #f9f9f9;
+    letter-spacing: 2px;
+}
+
+/* Animación Flotante Avanzada */
+@keyframes floating_4d {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Logos GIGANTES */
+.logo-img,
+.empresa-card i.fas {
+    width: 250px !important;
+    height: 220px !important;
+    object-fit: contain;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floating_4d 6s ease-in-out infinite;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.05));
+    mix-blend-mode: multiply;
 }
 
 .empresa-card i.fas {
-    font-size: 4.5rem !important;
+    font-size: 8rem !important;
+    mix-blend-mode: normal;
+    color: var(--primary);
+}
+
+.card-inten i.fas {
+    color: var(--color-inten) !important;
 }
 
 .empresa-card:hover .logo-img,
 .empresa-card:hover i.fas {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 0 70px currentColor;
-    /* Resplandor más intenso al hover */
+    transform: scale(1.1) translateY(-10px);
 }
 
 /* Valores Section */
