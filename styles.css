@@ -190,38 +190,77 @@ nav {
     font-weight: 400;
 }
 
-/* Estilos Específicos por Empresa */
-.card-vivebien {
-    background: linear-gradient(135deg, var(--color-vivebien) 0%, var(--color-vivebien-alt) 100%);
+/* Estilos Específicos por Empresa (Resplandor 4D) */
+.card-vivebien .logo-img {
+    box-shadow: 0 0 50px rgba(139, 0, 0, 0.4);
 }
 
-.card-inten {
-    background: linear-gradient(135deg, var(--color-inten) 0%, #00d2ff 100%);
+/* Rojo */
+.card-inten i.fas {
+    box-shadow: 0 0 50px rgba(0, 0, 255, 0.4);
+    color: var(--color-inten) !important;
 }
 
-.card-proin {
-    background: linear-gradient(135deg, var(--color-proin) 0%, var(--color-proin-alt) 100%);
+/* Azul */
+.card-proin .logo-img {
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.4);
 }
 
-.card-andax {
-    background: linear-gradient(135deg, var(--color-andax) 0%, var(--color-andax-alt) 100%);
+/* Rojo PROIN */
+.card-andax .logo-img {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
-.card-velare {
-    background: linear-gradient(135deg, var(--color-velare) 0%, var(--color-velare-alt) 100%);
+/* Negro */
+.card-velare .logo-img {
+    box-shadow: 0 0 50px rgba(128, 128, 128, 0.4);
 }
 
-/* Optimización de Logos */
-.logo-img {
-    height: 60px !important;
-    width: auto !important;
+/* Gris */
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Optimización de Logos 4D */
+.logo-img,
+.empresa-card i.fas {
+    width: 160px !important;
+    /* Más grande */
+    height: 160px !important;
     object-fit: contain;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     position: relative;
     z-index: 2;
-    mix-blend-mode: multiply;
-    /* Elimina el fondo blanco */
-    background-color: transparent;
+    background-color: white;
+    border-radius: 50%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floating 4s ease-in-out infinite;
+    transition: var(--transition);
+}
+
+.empresa-card i.fas {
+    font-size: 4.5rem !important;
+}
+
+.empresa-card:hover .logo-img,
+.empresa-card:hover i.fas {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 70px currentColor;
+    /* Resplandor más intenso al hover */
 }
 
 /* Valores Section */
