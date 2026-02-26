@@ -257,9 +257,11 @@ nav {
     }
 }
 
-/* Logos GIGANTES - Transparencia Total */
+/* Logos GIGANTES - Estáticos y Transparentes */
 .logo-img,
-.empresa-card i.fas {
+.empresa-card i.fas,
+.hero img,
+.nav-logo img {
     width: 280px !important;
     height: 240px !important;
     object-fit: contain;
@@ -273,11 +275,19 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: floating_4d 6s ease-in-out infinite;
     transition: all 0.5s ease;
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.1));
     mix-blend-mode: multiply;
-    /* Crucial para eliminar fondos blancos de capturas */
+    /* Elimina fondos blancos de las imágenes */
+}
+
+.hero img {
+    margin-bottom: 30px;
+}
+
+.nav-logo img {
+    height: 60px !important;
+    width: auto !important;
+    margin-bottom: 0;
 }
 
 .empresa-card i.fas {
