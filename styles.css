@@ -111,15 +111,14 @@ nav {
 }
 
 .hero img {
-    max-width: 200px;
-    height: 200px;
+    max-width: 280px;
+    height: 280px;
     margin-bottom: 30px;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
     object-fit: contain;
-    background-color: white;
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
 }
 
 .hero h1 {
@@ -259,16 +258,17 @@ nav {
     }
 }
 
-/* Logos GIGANTES */
+/* Logos GIGANTES - Transparencia Total */
 .logo-img,
 .empresa-card i.fas {
-    width: 250px !important;
-    height: 220px !important;
+    width: 280px !important;
+    height: 240px !important;
     object-fit: contain;
     margin-bottom: 50px;
     position: relative;
     z-index: 2;
     background-color: transparent !important;
+    background: transparent !important;
     border-radius: 0 !important;
     padding: 0 !important;
     display: flex;
@@ -276,8 +276,9 @@ nav {
     justify-content: center;
     animation: floating_4d 6s ease-in-out infinite;
     transition: all 0.5s ease;
-    filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.05));
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.1));
     mix-blend-mode: multiply;
+    /* Crucial para eliminar fondos blancos de capturas */
 }
 
 .empresa-card i.fas {
