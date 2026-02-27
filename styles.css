@@ -350,6 +350,10 @@ nav {
 
 .hero img {
     margin-bottom: 30px;
+    filter: invert(1) brightness(2);
+    /* Lo hace blanco/gris claro */
+    mix-blend-mode: normal;
+    /* Asegura que se vea blanco sobre el fondo oscuro */
 }
 
 .nav-logo img {
