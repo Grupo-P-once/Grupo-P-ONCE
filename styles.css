@@ -354,8 +354,8 @@ nav {
 
 .hero img {
     margin-bottom: 30px;
-    mix-blend-mode: normal;
-    filter: none;
+    mix-blend-mode: screen;
+    /* Elimina el fondo negro, deja el blanco */
 }
 
 .nav-logo img {
