@@ -150,21 +150,21 @@ nav {
 /* Animación eliminada del background ya que usamos video */
 
 .hero img.hero-logo-new {
-    max-width: 320px;
+    max-width: 250px;
     height: auto;
     margin-bottom: 30px;
-    filter: invert(1) brightness(2) contrast(1.1);
-    /* Hace el logo oscuro -> Blanco brillante */
-    object-fit: contain;
+    mix-blend-mode: screen;
+    /* Elimina fondo negro, mantiene el blanco */
+    filter: brightness(1.1) contrast(1.1);
     position: relative;
     z-index: 2;
 }
 
 .nav-logo img {
-    height: 50px !important;
+    height: 65px !important;
+    /* Más grande como se solicitó */
     width: auto !important;
     mix-blend-mode: multiply;
-    /* Limpia el fondo blanco del logo en nav */
 }
 
 .hero h1 {
@@ -338,9 +338,9 @@ nav {
 
 /* Logos de Empresas en Tarjetas */
 .logo-img {
-    width: 180px !important;
-    /* Tamaño reducido para mejor apreciación */
-    height: 120px !important;
+    width: 220px !important;
+    /* Un poco más grande para mejor presencia */
+    height: 150px !important;
     object-fit: contain;
     margin-bottom: 30px;
     mix-blend-mode: multiply;
