@@ -336,12 +336,22 @@ nav {
 }
 
 
-/* Estilos para logos antiguos removidos o unificados arriba */
+/* Logos de Empresas en Tarjetas */
+.logo-img {
+    width: 180px !important;
+    /* Tamaño reducido para mejor apreciación */
+    height: 120px !important;
+    object-fit: contain;
+    margin-bottom: 30px;
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
 
 .empresa-card i.fas {
-    font-size: 8rem !important;
-    mix-blend-mode: normal;
+    font-size: 5rem !important;
+    /* Reducción proporcional de iconos */
     color: var(--primary);
+    margin-bottom: 30px;
 }
 
 .card-inten i.fas {
