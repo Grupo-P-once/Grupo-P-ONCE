@@ -149,15 +149,22 @@ nav {
 
 /* Animación eliminada del background ya que usamos video */
 
-.hero img {
-    max-width: 280px;
-    height: 280px;
+.hero img.hero-logo-new {
+    max-width: 320px;
+    height: auto;
     margin-bottom: 30px;
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+    filter: invert(1) brightness(2) contrast(1.1);
+    /* Hace el logo oscuro -> Blanco brillante */
     object-fit: contain;
-    background-color: transparent !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-logo img {
+    height: 50px !important;
+    width: auto !important;
+    mix-blend-mode: multiply;
+    /* Limpia el fondo blanco del logo en nav */
 }
 
 .hero h1 {
@@ -329,40 +336,7 @@ nav {
 }
 
 
-/* Logos GIGANTES - Estáticos y Transparentes */
-.logo-img,
-.empresa-card i.fas,
-.hero img,
-.nav-logo img {
-    width: 280px !important;
-    height: 240px !important;
-    object-fit: contain;
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 2;
-    background-color: transparent !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    mix-blend-mode: multiply;
-    /* Elimina fondos blancos de las imágenes */
-}
-
-.hero img {
-    margin-bottom: 30px;
-    mix-blend-mode: screen;
-    /* Elimina el fondo negro, deja el blanco */
-}
-
-.nav-logo img {
-    height: 60px !important;
-    width: auto !important;
-    margin-bottom: 0;
-}
+/* Estilos para logos antiguos removidos o unificados arriba */
 
 .empresa-card i.fas {
     font-size: 8rem !important;
