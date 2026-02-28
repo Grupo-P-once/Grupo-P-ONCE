@@ -150,19 +150,27 @@ nav {
 /* Animación eliminada del background ya que usamos video */
 
 .hero img.hero-logo-new {
-    max-width: 250px;
-    height: auto;
+    width: 250px;
+    height: 250px;
     margin-bottom: 30px;
     mix-blend-mode: screen;
     /* Elimina fondo negro, mantiene el blanco */
-    filter: brightness(1.1) contrast(1.1);
+    filter: brightness(1.2) contrast(1.1);
+    border-radius: 50%;
+    /* Forma circular */
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    /* Marco elegante */
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    /* Fondo sutil para el círculo */
+    object-fit: contain;
     position: relative;
     z-index: 2;
 }
 
 .nav-logo img {
-    height: 65px !important;
-    /* Más grande como se solicitó */
+    height: 90px !important;
+    /* Aumentado significativamente como se pidió */
     width: auto !important;
     mix-blend-mode: multiply;
 }
