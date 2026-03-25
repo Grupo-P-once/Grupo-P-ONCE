@@ -4,86 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grupo P-ONCE es un conglomerado empresarial en León, Guanajuato con empresas en inmobiliaria, telefonía, construcción, andamios y cortinas.">
+    <meta property="og:title" content="Grupo P-ONCE | Institución de Excelencia">
+    <meta property="og:description" content="Conglomerado empresarial en León, Guanajuato. Vive Bien, INTEN, PROIN, ANDAX y VELARE.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-p11-v2026-symbol.png">
     <title>Grupo P-ONCE | Institución de Excelencia</title>
-    <!-- v1.1.0 - Triggering Deployment -->
-    <!-- Google Fonts: Montserrat & Playfair Display -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-p11-v2026-symbol.png">
-    <style>
-        /* Estilos inline para el logo base por si no carga la imagen local */
-        .nav-logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-        }
-    </style>
 </head>
 
 <body>
 
     <!-- Navegación -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-logo">
-            <!-- Referencia al archivo de logo del grupo -->
             <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-p11-v2026-full.png" alt="Grupo P-ONCE"
-                onerror="this.style.display='none'; this.parentElement.innerHTML='Grupo P-ONCE'">
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+            <span class="nav-logo-fallback">Grupo P-ONCE</span>
         </div>
-        <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#empresas">Empresas</a>
-            <a href="#nosotros">Valores</a>
-            <a href="#contacto">Contacto</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#empresas" class="nav-link">Empresas</a>
+            <a href="#nosotros" class="nav-link">Valores</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <!-- Sección Hero -->
     <header class="hero" id="inicio">
-        <!-- Video de Fondo -->
         <video autoplay muted loop playsinline class="hero-video">
             <source src="LOGOS -EMPRESAS/WhatsApp Video 2026-02-26 at 4.06.35 PM.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
         </video>
-        <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-p11-v2026-symbol.png" alt="Logo Grupo P-ONCE" class="hero-logo-new">
+        <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-p11-v2026-symbol.png" alt="Logo Grupo P-ONCE"
+            class="hero-logo-new" onerror="this.style.display='none'">
         <h1>Grupo P-ONCE</h1>
         <p>CONSTRUYENDO EL FUTURO</p>
+        <a href="#empresas" class="hero-cta">Conoce nuestras empresas <i class="fas fa-arrow-down"></i></a>
     </header>
 
-    <!-- Sección Principios y Valores (Destacada) -->
+    <!-- Sección Principios y Valores -->
     <section class="valores-premium" id="nosotros">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>Principios y Valores</h2>
                 <div class="line"></div>
                 <p>La base de nuestra excelencia y compromiso en cada proyecto.</p>
             </div>
             <div class="valores-grid-premium">
-                <div class="valor-card">
+                <div class="valor-card reveal">
                     <div class="icon-box">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Integridad</h3>
                     <p>Ética inquebrantable y transparencia total en todas nuestras acciones y decisiones.</p>
                 </div>
-                <div class="valor-card">
+                <div class="valor-card reveal">
                     <div class="icon-box">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Innovación</h3>
                     <p>Evolucionamos constantemente para ofrecer soluciones vanguardistas en cada sector.</p>
                 </div>
-                <div class="valor-card">
+                <div class="valor-card reveal">
                     <div class="icon-box">
                         <i class="fas fa-gem"></i>
                     </div>
                     <h3>Calidad</h3>
                     <p>Buscamos la perfección en cada detalle para superar las expectativas de nuestros clientes.</p>
                 </div>
-                <div class="valor-card">
+                <div class="valor-card reveal">
                     <div class="icon-box">
                         <i class="fas fa-users"></i>
                     </div>
@@ -97,85 +94,145 @@
     <!-- Sección de Empresas -->
     <section id="empresas">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Nuestras Empresas</h2>
+            <div class="section-title reveal">
+                <h2>Nuestras Empresas</h2>
+                <div class="line"></div>
+            </div>
             <div class="empresas-grid">
 
-                <!-- Vive Bien Grupo Inmobiliario -->
-                <a href="https://grupo-p-once.github.io/ViveBien/index.html" class="empresa-card card-vivebien"
-                    target="_blank">
+                <!-- Vive Bien -->
+                <a href="https://grupo-p-once.github.io/ViveBien/index.html" class="empresa-card card-vivebien reveal"
+                    target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/VIVEBIEN/Captura de pantalla 2025-07-16 124011.png" alt="Vive Bien"
-                        class="logo-img">
+                        class="logo-img" onerror="this.style.display='none'">
                     <h3>Vive Bien</h3>
                     <p>Compra, venta y renta de propiedades en León. Tu nuevo hogar comienza aquí.</p>
+                    <span class="card-link">Visitar sitio <i class="fas fa-arrow-right"></i></span>
                 </a>
 
-                <!-- INTEN Telefonía -->
-                <a href="https://intenmovil.com" class="empresa-card card-inten" target="_blank">
+                <!-- INTEN -->
+                <a href="https://intenmovil.com" class="empresa-card card-inten reveal" target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/INTEN/Captura de pantalla 2026-02-26 184612.png" alt="INTEN"
-                        class="logo-img">
+                        class="logo-img" onerror="this.style.display='none'">
                     <h3>INTEN</h3>
                     <p>Internet y telefonía móvil para hogar y empresa. Conectividad sin límites.</p>
+                    <span class="card-link">Visitar sitio <i class="fas fa-arrow-right"></i></span>
                 </a>
 
-                <!-- PROIN Proyectos Inmobiliarios -->
-                <div class="empresa-card card-proin">
+                <!-- PROIN -->
+                <a href="https://wa.me/524778116501?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20PROIN"
+                    class="empresa-card card-proin reveal" target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/PROIN desarrolladores/Captura de pantalla 2025-07-16 124022.png"
-                        alt="PROIN" class="logo-img">
+                        alt="PROIN" class="logo-img" onerror="this.style.display='none'">
                     <h3>PROIN</h3>
                     <p>Desarrollo y gestión de proyectos inmobiliarios. Creamos espacios con visión de futuro.</p>
-                </div>
+                    <span class="card-link">Contactar <i class="fas fa-arrow-right"></i></span>
+                </a>
 
-                <!-- ANDAX Andamios -->
-                <div class="empresa-card card-andax">
-                    <img src="LOGOS -EMPRESAS/ANDAX/logo-andax-2026.png" alt="ANDAX" class="logo-img">
+                <!-- ANDAX -->
+                <a href="https://wa.me/524778116501?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20ANDAX"
+                    class="empresa-card card-andax reveal" target="_blank" rel="noopener">
+                    <img src="LOGOS -EMPRESAS/ANDAX/logo-andax-2026.png" alt="ANDAX" class="logo-img"
+                        onerror="this.style.display='none'">
                     <h3>ANDAX</h3>
                     <p>Renta de andamios y equipo de construcción. Seguridad y altura para tus obras.</p>
-                </div>
+                    <span class="card-link">Contactar <i class="fas fa-arrow-right"></i></span>
+                </a>
 
-                <!-- VELARE Cortinas y Persianas -->
-                <div class="empresa-card card-velare">
+                <!-- VELARE -->
+                <a href="https://wa.me/524778116501?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20VELARE"
+                    class="empresa-card card-velare reveal" target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/VELARE/Captura_de_pantalla_2026-02-26_153201-removebg-preview.png"
-                        alt="VELARE" class="logo-img">
+                        alt="VELARE" class="logo-img" onerror="this.style.display='none'">
                     <h3>VELARE</h3>
                     <p>Soluciones en cortinas y persianas para hogar y empresa. Elegancia en cada detalle.</p>
-                </div>
+                    <span class="card-link">Contactar <i class="fas fa-arrow-right"></i></span>
+                </a>
 
             </div>
         </div>
     </section>
-
 
     <!-- Sección de Contacto -->
     <section class="contacto" id="contacto">
-        <div class="col">
+        <div class="col reveal">
             <h2>Contacto</h2>
             <div class="info-item">
-                <h4>Dirección</h4>
+                <h4><i class="fas fa-map-marker-alt"></i> Dirección</h4>
                 <p>Blvd. Campestre 2910 Local 10, Cañada del Refugio, C.P. 37358, León, Guanajuato.</p>
             </div>
             <div class="info-item">
-                <h4>Teléfono</h4>
-                <p>477 811 6501</p>
+                <h4><i class="fas fa-phone"></i> Teléfono</h4>
+                <p><a href="tel:+524778116501">477 811 6501</a></p>
             </div>
             <div class="info-item">
-                <h4>Correo</h4>
-                <p>jpepeponce200903@gmail.com</p>
+                <h4><i class="fas fa-envelope"></i> Correo</h4>
+                <p><a href="mailto:jpepeponce200903@gmail.com">jpepeponce200903@gmail.com</a></p>
             </div>
             <div class="social-links">
-                <a href="https://www.facebook.com/GrupoP11" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/grupo.p11/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/GrupoP11" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/grupo.p11/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/524778116501" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
-        <div class="col" style="display:flex; align-items:center; justify-content:center;">
-            <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
-                <a href="#" onclick="openModal()" style="color:white; text-decoration: underline;">Aviso de
-                    Privacidad</a>
-            </p>
+        <div class="col reveal">
+            <h2>Envíanos un mensaje</h2>
+            <form class="contact-form" id="contactForm"
+                action="https://formsubmit.co/jpepeponce200903@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde Grupo P-ONCE">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="telefono" placeholder="Tu teléfono (opcional)">
+                </div>
+                <div class="form-group">
+                    <select name="empresa">
+                        <option value="" disabled selected>¿Sobre qué empresa?</option>
+                        <option value="Grupo P-ONCE">Grupo P-ONCE</option>
+                        <option value="Vive Bien">Vive Bien</option>
+                        <option value="INTEN">INTEN</option>
+                        <option value="PROIN">PROIN</option>
+                        <option value="ANDAX">ANDAX</option>
+                        <option value="VELARE">VELARE</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    Enviar mensaje <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Grupo P-ONCE. Todos los derechos reservados.</p>
+            <p>
+                <button class="privacy-link" onclick="openModal()">Aviso de Privacidad</button>
+                &nbsp;·&nbsp;
+                León, Guanajuato, México
+            </p>
+        </div>
+    </footer>
+
     <!-- Botón Flotante WhatsApp -->
-    <a href="https://wa.me/524778116501" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/524778116501" class="whatsapp-float" target="_blank" rel="noopener"
+        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -186,10 +243,10 @@
     </div>
 
     <!-- Modal Aviso de Privacidad -->
-    <div id="privacyModal" class="modal">
+    <div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <h2>Aviso de Privacidad Completo</h2>
+            <button class="modal-close" onclick="closeModal()" aria-label="Cerrar">&times;</button>
+            <h2 id="modalTitle">Aviso de Privacidad</h2>
             <p><strong>Grupo P-ONCE</strong>, con domicilio en Blvd. Campestre 2910 Local 10, León, Guanajuato, es
                 responsable del tratamiento de sus datos personales conforme a la Ley Federal de Protección de Datos
                 Personales en Posesión de los Particulares (LFPDPPP).</p>
@@ -200,7 +257,7 @@
             <br>
             <p><strong>Derechos ARCO:</strong> Usted tiene derecho a acceder, rectificar y cancelar sus datos
                 personales, así como de oponerse al tratamiento de los mismos (Derechos ARCO). Para ello, puede
-                contactarnos en jpepeponce200903@gmail.com.</p>
+                contactarnos en <a href="mailto:jpepeponce200903@gmail.com">jpepeponce200903@gmail.com</a>.</p>
             <br>
             <p><strong>Transferencia:</strong> Sus datos no serán compartidos con terceros sin su consentimiento
                 expreso, salvo las excepciones previstas en el artículo 37 de la LFPDPPP.</p>
@@ -208,34 +265,79 @@
     </div>
 
     <script>
-        // Funcion para el banner de cookies
+        // ── Smooth scroll ──────────────────────────────────────────
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // ── Hamburger menu ─────────────────────────────────────────
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // ── Active nav link on scroll ──────────────────────────────
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinkEls = document.querySelectorAll('.nav-link');
+        const activeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinkEls.forEach(link => {
+                        link.classList.toggle('active',
+                            link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => activeObserver.observe(s));
+
+        // ── Scroll reveal ──────────────────────────────────────────
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── Cookies ────────────────────────────────────────────────
         function acceptCookies() {
             document.getElementById('cookieBanner').style.display = 'none';
             localStorage.setItem('cookiesAccepted', 'true');
         }
-
         if (localStorage.getItem('cookiesAccepted')) {
             document.getElementById('cookieBanner').style.display = 'none';
         }
 
-        // Funciones para el Modal de Privacidad
+        // ── Modal privacidad ───────────────────────────────────────
         function openModal() {
             document.getElementById('privacyModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
-
         function closeModal() {
             document.getElementById('privacyModal').style.display = 'none';
+            document.body.style.overflow = '';
         }
-
-        // Cerrar modal si se hace clic fuera de el
-        window.onclick = function (event) {
-            let modal = document.getElementById('privacyModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
+        window.addEventListener('click', e => {
+            if (e.target === document.getElementById('privacyModal')) closeModal();
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeModal();
+        });
     </script>
 
 </body>
-
 </html>
