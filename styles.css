@@ -27,6 +27,7 @@
     --color-andax:        #cc2200;
     --color-velare:       #808080;
     --color-velare-alt:   #d4af37;
+    --color-otli:         #0a9e8a;
 
     /* Sistema de sombras (UI/UX Pro Max depth scale) */
     --shadow-xs:   0 1px 2px rgba(0,0,0,0.06);
@@ -529,6 +530,10 @@ nav {
 .card-velare:hover {
     box-shadow: 0 20px 80px rgba(212, 175, 55, 0.30);
     border-color: var(--color-velare-alt);
+}
+.card-otli:hover {
+    box-shadow: 0 20px 80px rgba(10, 158, 138, 0.35);
+    border-color: var(--color-otli);
 }
 
 /* Focus visible para tarjetas (accesibilidad) */
