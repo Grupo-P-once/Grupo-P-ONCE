@@ -741,12 +741,27 @@ footer {
     letter-spacing: 0.5px;
 }
 
-.footer-logo {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
-    opacity: 0.9;
+.footer-logo-circle {
     flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    opacity: 0.92;
+    transition: opacity 0.2s, transform 0.2s;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.footer-logo-circle:hover { opacity: 1; transform: scale(1.05); }
+.footer-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .footer-center {
