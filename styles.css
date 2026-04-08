@@ -905,6 +905,52 @@ footer {
     outline-offset: 2px;
 }
 
+/* ── ShinyText (react-bits) ────────────────────────────────────── */
+.shiny-text {
+    background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.35) 0%,
+        rgba(255,255,255,1)    40%,
+        rgba(255,255,255,1)    55%,
+        rgba(255,255,255,0.35) 100%
+    );
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    0%   { background-position: -250% center; }
+    100% { background-position:  250% center; }
+}
+
+/* ── GlareHover (react-bits) ───────────────────────────────────── */
+.empresa-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,0.18) 50%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.65s ease;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.empresa-card:hover::before {
+    left: 160%;
+}
+
 /* ── Scroll Reveal ─────────────────────────────────────────────── */
 .reveal {
     opacity: 0;

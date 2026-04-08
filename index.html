@@ -46,7 +46,7 @@
         <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-p11-v2026-symbol.png" alt="Logo Grupo P-ONCE"
             class="hero-logo-new" onerror="this.style.display='none'">
         <h1>Grupo P-ONCE</h1>
-        <p>CONSTRUYENDO EL FUTURO</p>
+        <p class="shiny-text">CONSTRUYENDO EL FUTURO</p>
         <a href="#empresas" class="hero-cta">Conoce nuestras empresas <i class="fas fa-arrow-down"></i></a>
     </header>
 
@@ -54,7 +54,7 @@
     <section class="valores-premium" id="nosotros">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Principios y Valores</h2>
+                <h2 class="scramble">Principios y Valores</h2>
                 <div class="line"></div>
                 <p>La base de nuestra excelencia y compromiso en cada proyecto.</p>
             </div>
@@ -95,13 +95,13 @@
     <section id="empresas">
         <div class="container">
             <div class="section-title reveal">
-                <h2>Nuestras Empresas</h2>
+                <h2 class="scramble">Nuestras Empresas</h2>
                 <div class="line"></div>
             </div>
             <div class="empresas-grid">
 
                 <!-- Vive Bien -->
-                <a href="https://grupo-p-once.github.io/ViveBien/index.html" class="empresa-card card-vivebien reveal"
+                <a href="https://vive-bien.vercel.app" class="empresa-card card-vivebien reveal"
                     target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/VIVEBIEN/Captura de pantalla 2025-07-16 124011.png" alt="Vive Bien"
                         class="logo-img" onerror="this.style.display='none'">
@@ -140,13 +140,13 @@
                 </a>
 
                 <!-- VELARE -->
-                <a href="https://wa.me/524778116501?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20VELARE"
+                <a href="https://velare-nu.vercel.app"
                     class="empresa-card card-velare reveal" target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/VELARE/Captura_de_pantalla_2026-02-26_153201-removebg-preview.png"
                         alt="VELARE" class="logo-img" onerror="this.style.display='none'">
                     <h3>VELARE</h3>
                     <p>Soluciones en cortinas y persianas para hogar y empresa. Elegancia en cada detalle.</p>
-                    <span class="card-link">Contactar <i class="fas fa-arrow-right"></i></span>
+                    <span class="card-link">Visitar sitio <i class="fas fa-arrow-right"></i></span>
                 </a>
 
             </div>
@@ -312,6 +312,36 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── ScrambledText (react-bits inspired) ────────────────────
+        const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@!%&';
+        function scramble(el) {
+            const original = el.dataset.original || el.textContent;
+            el.dataset.original = original;
+            let frame = 0;
+            const totalFrames = original.length * 4;
+            const id = setInterval(() => {
+                el.textContent = original.split('').map((ch, i) => {
+                    if (ch === ' ') return ' ';
+                    if (i < frame / 4) return original[i];
+                    return CHARS[Math.floor(Math.random() * CHARS.length)];
+                }).join('');
+                if (frame >= totalFrames) {
+                    clearInterval(id);
+                    el.textContent = original;
+                }
+                frame++;
+            }, 28);
+        }
+        const scrambleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    scramble(entry.target);
+                    scrambleObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.scramble').forEach(el => scrambleObserver.observe(el));
 
         // ── Cookies ────────────────────────────────────────────────
         function acceptCookies() {
