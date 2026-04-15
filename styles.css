@@ -530,6 +530,10 @@ nav {
     box-shadow: 0 20px 80px rgba(212, 175, 55, 0.30);
     border-color: var(--color-velare-alt);
 }
+.card-otli:hover {
+    box-shadow: 0 20px 80px rgba(0, 180, 120, 0.30);
+    border-color: #00b478;
+}
 
 /* Focus visible para tarjetas (accesibilidad) */
 .empresa-card:focus-visible {
