@@ -7,15 +7,15 @@
 
 /* ── Variables ─────────────────────────────────────────────────── */
 :root {
-    /* Colores base */
-    --primary:      #1a1a1a;
-    --secondary:    #4a4a4a;
-    --muted:        #8a8a8a;
+    /* Colores base — Manual de Identidad de Marca 2025 */
+    --primary:      #0F1113;  /* Negro profundo / Autoridad */
+    --secondary:    #282E33;  /* Grafito / Estabilidad */
+    --muted:        #6B7280;  /* Gris acero / Profesionalismo */
     --accent:       #d4af37;
     --accent-dark:  #b8941f;
     --white:        #ffffff;
-    --bg-light:     #fbfbfb;
-    --bg-section:   #f5f4f2;
+    --bg-light:     #F5F7FA;  /* Claridad */
+    --bg-section:   #F5F7FA;  /* Claridad */
     --border:       rgba(0, 0, 0, 0.08);
 
     /* Colores por empresa */
@@ -240,6 +240,15 @@ nav {
     z-index: 0;
 }
 
+.hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: #0F1113;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -251,16 +260,17 @@ nav {
 .hero-logo-new {
     position: relative;
     z-index: 2;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.85);
-    padding: 22px;
-    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.06);
     mix-blend-mode: screen;
-    filter: brightness(1.2) contrast(1.05);
-    margin-bottom: 28px;
+    filter: brightness(1.15) contrast(1.1);
+    margin-bottom: 32px;
+    backdrop-filter: blur(2px);
 }
 
 .hero h1 {
@@ -281,6 +291,18 @@ nav {
     opacity: 0.9;
     margin-bottom: 40px;
     text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+
+.hero-tagline-secondary {
+    position: relative;
+    z-index: 2;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    margin-top: -8px;
 }
 
 .hero-cta {
@@ -723,7 +745,7 @@ nav {
 
 /* ── Footer ────────────────────────────────────────────────────── */
 footer {
-    background: #0d0b08;
+    background: #0F1113;
     color: rgba(255,255,255,0.5);
     padding: 24px 5%;
     border-top: 1px solid rgba(255,255,255,0.06);
