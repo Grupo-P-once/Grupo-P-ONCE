@@ -264,13 +264,13 @@ nav {
     height: 200px;
     object-fit: contain;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    padding: 28px;
-    background: rgba(255, 255, 255, 0.06);
-    mix-blend-mode: screen;
-    filter: brightness(1.15) contrast(1.1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.94);
+    mix-blend-mode: normal;
+    filter: none;
     margin-bottom: 32px;
-    backdrop-filter: blur(2px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
 }
 
 .hero h1 {
