@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Grupo P-ONCE es un conglomerado empresarial en León, Guanajuato con empresas en inmobiliaria, telefonía, construcción, andamios y cortinas.">
-    <meta property="og:title" content="Grupo P-ONCE | Institución de Excelencia">
-    <meta property="og:description" content="Conglomerado empresarial en León, Guanajuato. Vive Bien, INTEN, PROIN, ANDAX y VELARE.">
+    <meta name="description" content="Grupo P-ONCE es un grupo empresarial en León, Guanajuato con empresas en inmobiliaria, desarrollo de proyectos, andamios, inteligencia artificial y cortinas.">
+    <meta name="theme-color" content="#0F1113">
+    <meta property="og:title" content="Grupo P-ONCE | Construyendo el futuro">
+    <meta property="og:description" content="Más que empresas, un mejor mañana. Vive Bien, PROIN, ANDAX, OTLI y VELARE en León, Guanajuato.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-gp11-full.png">
-    <title>Grupo P-ONCE | Institución de Excelencia</title>
+    <meta property="og:url" content="https://gp-once.com/">
+    <meta property="og:image" content="https://gp-once.com/LOGOS%20-EMPRESAS/GRUPO%20P-ONCE/logo-gp11-full.png">
+    <meta name="twitter:card" content="summary">
+    <title>Grupo P-ONCE | Construyendo el futuro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -18,10 +23,12 @@
 
 <body>
 
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+
     <!-- Navegación -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Principal">
         <div class="nav-logo">
-            <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-gp11-full.png" alt="Grupo P-ONCE"
+            <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-gp11-full.png" alt="Grupo P-ONCE" width="71" height="60"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
             <span class="nav-logo-fallback">Grupo P-ONCE</span>
         </div>
@@ -40,14 +47,16 @@
 
     <!-- Sección Hero -->
     <header class="hero" id="inicio">
-        <canvas class="hero-canvas" id="heroCanvas"></canvas>
-        <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-gp11-symbol.png" alt="Logo Grupo P-ONCE"
+        <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+        <img src="LOGOS -EMPRESAS/GRUPO P-ONCE/logo-gp11-symbol.png" alt="Logo Grupo P-ONCE" width="200" height="200"
             class="hero-logo-new" onerror="this.style.display='none'">
         <h1>Grupo P-ONCE</h1>
         <p>CONSTRUYENDO EL FUTURO</p>
         <p class="hero-tagline-secondary">Personas &nbsp;|&nbsp; Proyectos &nbsp;|&nbsp; Oportunidades</p>
-        <a href="#empresas" class="hero-cta">Conoce nuestras empresas <i class="fas fa-arrow-down"></i></a>
+        <a href="#empresas" class="hero-cta">Conoce nuestras empresas <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
     </header>
+
+    <main id="main">
 
     <!-- Sección Principios y Valores -->
     <section class="valores-premium" id="nosotros">
@@ -96,6 +105,7 @@
             <div class="section-title reveal">
                 <h2>Nuestras Empresas</h2>
                 <div class="line"></div>
+                <p>Más que empresas, un mejor mañana.</p>
             </div>
             <div class="empresas-grid">
 
@@ -109,29 +119,20 @@
                     <span class="card-link">Visitar sitio <i class="fas fa-arrow-right"></i></span>
                 </a>
 
-                <!-- INTEN -->
-                <a href="https://intenmovil.com" class="empresa-card card-inten reveal" target="_blank" rel="noopener">
-                    <img src="LOGOS -EMPRESAS/INTEN/Captura de pantalla 2026-02-26 184612.png" alt="INTEN"
-                        class="logo-img" onerror="this.style.display='none'">
-                    <h3>INTEN</h3>
-                    <p>Internet y telefonía móvil para hogar y empresa. Conectividad sin límites.</p>
-                    <span class="card-link">Visitar sitio <i class="fas fa-arrow-right"></i></span>
-                </a>
-
                 <!-- PROIN -->
-                <a href="https://wa.me/524778116501?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20PROIN"
+                <a href="https://proindesarrolladores.com/"
                     class="empresa-card card-proin reveal" target="_blank" rel="noopener">
                     <img src="LOGOS -EMPRESAS/PROIN desarrolladores/Captura de pantalla 2025-07-16 124022.png"
-                        alt="PROIN" class="logo-img" onerror="this.style.display='none'">
+                        alt="PROIN" class="logo-img" loading="lazy" onerror="this.style.display='none'">
                     <h3>PROIN</h3>
                     <p>Desarrollo y gestión de proyectos inmobiliarios. Creamos espacios con visión de futuro.</p>
-                    <span class="card-link">Contactar <i class="fas fa-arrow-right"></i></span>
+                    <span class="card-link">Visitar sitio <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                 </a>
 
                 <!-- ANDAX -->
                 <a href="https://wa.me/524778116501?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20ANDAX"
                     class="empresa-card card-andax reveal" target="_blank" rel="noopener">
-                    <img src="LOGOS -EMPRESAS/ANDAX/logo-andax-2026.png" alt="ANDAX" class="logo-img"
+                    <img src="LOGOS -EMPRESAS/ANDAX/logo-andax-v2.png" alt="ANDAX" class="logo-img" loading="lazy"
                         onerror="this.style.display='none'">
                     <h3>ANDAX</h3>
                     <p>Renta de andamios y equipo de construcción. Seguridad y altura para tus obras.</p>
@@ -176,7 +177,7 @@
             </div>
             <div class="info-item">
                 <h4><i class="fas fa-envelope"></i> Correo</h4>
-                <p><a href="mailto:grupo.p11.ee@gmail.com">grupo.p11.ee@gmail.com</a></p>
+                <p><a href="mailto:joseponcep@gp-once.com">joseponcep@gp-once.com</a></p>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/GrupoP11" target="_blank" rel="noopener" aria-label="Facebook">
@@ -196,25 +197,29 @@
         <div class="col reveal">
             <h2>Envíanos un mensaje</h2>
             <form class="contact-form" id="contactForm"
-                action="https://formsubmit.co/grupo.p11.ee@gmail.com" method="POST">
+                action="https://formsubmit.co/joseponcep@gp-once.com" method="POST">
                 <input type="hidden" name="_subject" value="Nuevo mensaje desde Grupo P-ONCE">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://gp-once.com/?enviado=1#contacto">
+                <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey">
                 <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <label for="f-nombre">Nombre</label>
+                    <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <label for="f-email">Correo electrónico</label>
+                    <input type="email" id="f-email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="telefono" placeholder="Tu teléfono (opcional)">
+                    <label for="f-tel">Teléfono <span class="optional">(opcional)</span></label>
+                    <input type="tel" id="f-tel" name="telefono" placeholder="477 000 0000" autocomplete="tel">
                 </div>
                 <div class="form-group">
-                    <select name="empresa">
-                        <option value="" disabled selected>¿Sobre qué empresa?</option>
-                        <option value="Grupo P-ONCE">Grupo P-ONCE</option>
+                    <label for="f-empresa">¿Sobre qué empresa?</label>
+                    <select id="f-empresa" name="empresa">
+                        <option value="Grupo P-ONCE" selected>Grupo P-ONCE</option>
                         <option value="Vive Bien">Vive Bien</option>
-                        <option value="INTEN">INTEN</option>
                         <option value="PROIN">PROIN</option>
                         <option value="ANDAX">ANDAX</option>
                         <option value="OTLI">OTLI</option>
@@ -222,14 +227,20 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+                    <label for="f-msg">Mensaje</label>
+                    <textarea id="f-msg" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
                 </div>
                 <button type="submit" class="form-submit">
-                    Enviar mensaje <i class="fas fa-paper-plane"></i>
+                    <span class="btn-label">Enviar mensaje</span> <i class="fas fa-paper-plane" aria-hidden="true"></i>
                 </button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden>
+                    <i class="fas fa-circle-check" aria-hidden="true"></i> Mensaje enviado. Te responderemos pronto.
+                </p>
             </form>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -273,7 +284,7 @@
             <br>
             <p><strong>Derechos ARCO:</strong> Usted tiene derecho a acceder, rectificar y cancelar sus datos
                 personales, así como de oponerse al tratamiento de los mismos (Derechos ARCO). Para ello, puede
-                contactarnos en <a href="mailto:grupo.p11.ee@gmail.com">grupo.p11.ee@gmail.com</a>.</p>
+                contactarnos en <a href="mailto:joseponcep@gp-once.com">joseponcep@gp-once.com</a>.</p>
             <br>
             <p><strong>Transferencia:</strong> Sus datos no serán compartidos con terceros sin su consentimiento
                 expreso, salvo las excepciones previstas en el artículo 37 de la LFPDPPP.</p>
@@ -281,84 +292,96 @@
     </div>
 
     <script>
-        // ── Hero canvas: red de nodos animada ──────────────────────
+        // ── Hero canvas: red de nodos ──────────────────────────────
         (function () {
             const canvas = document.getElementById('heroCanvas');
             const ctx = canvas.getContext('2d');
-            const NODE_COUNT = 55;
-            const MAX_DIST = 160;
-            const SPEED = 0.35;
-
-            let W, H, nodes;
-
-            function resize() {
-                W = canvas.width  = canvas.offsetWidth;
-                H = canvas.height = canvas.offsetHeight;
-            }
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const MAX_DIST = 150;
+            const SPEED = 0.3;
+            let W, H, nodes = [], running = false, visible = true;
 
             function mkNode() {
-                const angle = Math.random() * Math.PI * 2;
-                return {
-                    x: Math.random() * W,
-                    y: Math.random() * H,
-                    vx: Math.cos(angle) * SPEED * (0.5 + Math.random()),
-                    vy: Math.sin(angle) * SPEED * (0.5 + Math.random()),
-                    r: 1.5 + Math.random() * 1.5
-                };
+                const a = Math.random() * Math.PI * 2;
+                const s = SPEED * (0.5 + Math.random());
+                return { x: Math.random() * W, y: Math.random() * H,
+                         vx: Math.cos(a) * s, vy: Math.sin(a) * s, r: 1.2 + Math.random() * 1.4 };
             }
 
-            function init() {
-                resize();
-                nodes = Array.from({ length: NODE_COUNT }, mkNode);
+            function resize() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                W = canvas.offsetWidth; H = canvas.offsetHeight;
+                canvas.width = W * dpr; canvas.height = H * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                const count = Math.max(24, Math.min(70, Math.round(W * H / 22000)));
+                nodes = Array.from({ length: count }, mkNode);
+                if (!running) draw(false);
             }
 
-            function draw() {
-                ctx.clearRect(0, 0, W, H);
-
-                // Fondo con gradiente sutil
-                const grad = ctx.createRadialGradient(W * 0.5, H * 0.45, 0, W * 0.5, H * 0.45, W * 0.65);
-                grad.addColorStop(0, '#1a2030');
-                grad.addColorStop(1, '#0F1113');
-                ctx.fillStyle = grad;
+            function draw(animate) {
+                const g = ctx.createRadialGradient(W * 0.5, H * 0.45, 0, W * 0.5, H * 0.45, Math.max(W, H) * 0.7);
+                g.addColorStop(0, '#1b222c');
+                g.addColorStop(1, '#0F1113');
+                ctx.fillStyle = g;
                 ctx.fillRect(0, 0, W, H);
 
-                // Líneas de conexión
                 for (let i = 0; i < nodes.length; i++) {
+                    const n = nodes[i];
                     for (let j = i + 1; j < nodes.length; j++) {
-                        const dx = nodes[i].x - nodes[j].x;
-                        const dy = nodes[i].y - nodes[j].y;
-                        const d = Math.sqrt(dx * dx + dy * dy);
-                        if (d < MAX_DIST) {
-                            ctx.beginPath();
-                            ctx.moveTo(nodes[i].x, nodes[i].y);
-                            ctx.lineTo(nodes[j].x, nodes[j].y);
-                            ctx.strokeStyle = `rgba(255,255,255,${0.18 * (1 - d / MAX_DIST)})`;
+                        const m = nodes[j];
+                        const dx = n.x - m.x, dy = n.y - m.y;
+                        const d2 = dx * dx + dy * dy;
+                        if (d2 < MAX_DIST * MAX_DIST) {
+                            const t = 1 - Math.sqrt(d2) / MAX_DIST;
+                            ctx.strokeStyle = 'rgba(255,255,255,' + (0.2 * t).toFixed(3) + ')';
                             ctx.lineWidth = 0.7;
-                            ctx.stroke();
+                            ctx.beginPath(); ctx.moveTo(n.x, n.y); ctx.lineTo(m.x, m.y); ctx.stroke();
                         }
                     }
                 }
-
-                // Nodos
+                ctx.fillStyle = 'rgba(255,255,255,0.6)';
                 nodes.forEach(n => {
-                    ctx.beginPath();
-                    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(255,255,255,0.55)';
-                    ctx.fill();
-
-                    // Mover
-                    n.x += n.vx;
-                    n.y += n.vy;
-                    if (n.x < 0 || n.x > W) n.vx *= -1;
-                    if (n.y < 0 || n.y > H) n.vy *= -1;
+                    ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 6.2832); ctx.fill();
+                    if (animate) {
+                        n.x += n.vx; n.y += n.vy;
+                        if (n.x < 0 || n.x > W) n.vx *= -1;
+                        if (n.y < 0 || n.y > H) n.vy *= -1;
+                    }
                 });
-
-                requestAnimationFrame(draw);
             }
 
-            window.addEventListener('resize', () => { resize(); });
-            init();
-            draw();
+            function loop() {
+                if (!running) return;
+                draw(true);
+                requestAnimationFrame(loop);
+            }
+            function update() {
+                const should = visible && !document.hidden && !reduceMotion.matches;
+                if (should && !running) { running = true; loop(); }
+                else if (!should) { running = false; }
+            }
+
+            new IntersectionObserver(es => { visible = es[0].isIntersecting; update(); }, { threshold: 0 })
+                .observe(canvas);
+            document.addEventListener('visibilitychange', update);
+            reduceMotion.addEventListener('change', update);
+            let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(resize, 150); });
+            resize(); update();
+        })();
+
+        // ── Formulario: estado de envío ────────────────────────────
+        (function () {
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('formStatus');
+            form.addEventListener('submit', () => {
+                const btn = form.querySelector('.form-submit');
+                btn.disabled = true;
+                btn.querySelector('.btn-label').textContent = 'Enviando…';
+            });
+            if (new URLSearchParams(location.search).get('enviado') === '1') {
+                status.hidden = false;
+                history.replaceState(null, '', location.pathname + '#contacto');
+            }
         })();
 
         // ── Smooth scroll ──────────────────────────────────────────
